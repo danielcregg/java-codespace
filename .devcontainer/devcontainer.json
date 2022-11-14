@@ -14,7 +14,8 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
-
+	"postCreateCommand": "umask 0002 && . /usr/local/sdkman/bin/sdkman-init.sh && sdk install java 17.0.4.1.fx-zulu && sdk default java 17.0.4.1.fx-zulu",
+	
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
