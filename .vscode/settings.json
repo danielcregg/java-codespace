@@ -5,12 +5,12 @@
     "java.debug.settings.console": "integratedTerminal",
     "files.exclude": {
         ".github": true, 
-        ".devcontainer": true,
+        ".devcontainer": false,
         "bin": true,
         "test": true,
         "target": true,
         "docs": true,
         ".gitignore": true,
-        ".vscode": true
+        ".vscode": false
       }
 }
