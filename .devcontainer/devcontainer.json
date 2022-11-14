@@ -1,11 +1,25 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.195.0/containers/java
 {
 	"name": "Java",
-	"image": "mcr.microsoft.com/devcontainers/java:11-bullseye",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			// Use the VARIANT arg to pick a Debian OS version: buster, bullseye
+			// Use bullseye when running on local arm64/Apple Silicon.
+			"VARIANT": "17",
+			// Options
+			"INSTALL_MAVEN": "false",
+			"INSTALL_GRADLE": "false",
+			"NODE_VERSION": "none"
+		}
+	},
 	"features": {
 		"ghcr.io/devcontainers/features/java:1": {},
 		"ghcr.io/devcontainers/features/desktop-lite:1": {
 			"webPort": "6080",
-			"vncPort": "5901"
+			"vncPort": "5901",
+			"password": ""
 		}
 	},
 
@@ -14,7 +28,6 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	// "postCreateCommand": "java -version",
-	"postCreateCommand": "umask 0002 && . /usr/local/sdkman/bin/sdkman-init.sh && sdk install java 17.0.4.1.fx-zulu && sdk default java 17.0.4.1.fx-zulu",
 	
 	// Configure tool-specific properties.
 	"customizations": {
