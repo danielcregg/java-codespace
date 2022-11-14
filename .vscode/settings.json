@@ -1,0 +1,16 @@
+{
+    "workbench.colorTheme": "Default Dark+",
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "java.server.launchMode" : "Standard",
+    "java.debug.settings.console": "integratedTerminal",
+    "files.exclude": {
+        ".github": true, 
+        ".devcontainer": true,
+        "bin": true,
+        "test": true,
+        "target": true,
+        "docs": true,
+        ".gitignore": true,
+        ".vscode": true
+      }
+}
